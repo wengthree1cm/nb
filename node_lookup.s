@@ -27,7 +27,8 @@ ldr r8, [fp,#4] //hour in variable
    
     
 
-.Loop:  
+.Loop:  cmp r0,0
+        beq .Lfin
         cmp r1,r4
         bne .Lchange
         cmp r2,r5
