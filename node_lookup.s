@@ -40,6 +40,8 @@ ldr r8, [fp,#4] //hour in variable
 
 .Lchange: 
        ldr r0,[r0,#24]
+       cmp r0,0
+       beq .Lfin
        ldr r4,[r0]
        ldr r5,[r0,#4]
        ldr r6,[r0,#8]
