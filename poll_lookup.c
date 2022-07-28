@@ -242,7 +242,7 @@ int load_table(node **table, unsigned long size, char *filename) {
 		char *stripped_date = strip_date(buf1);
         unsigned long value=hash(stripped_date)%size;
         
-        if(node_lookup(head,buf[0],buf[1],buf[2],buf[3])!=NULL){
+        if(node_lookup(table[value],buf[0],buf[1],buf[2],buf[3])!=NULL){
             fprintf(stderr,"load_table duplicate entry: %d-%d-%d %d\n",buf[0],buf[1],buf[2],buf[3]);
         }
         else{
