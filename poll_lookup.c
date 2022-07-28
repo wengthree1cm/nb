@@ -1,6 +1,6 @@
 /*
  * CSE30 Summer Session 1 '22 HW3
- * CSE30 username: cs30su122xxx (TODO: Fill in)
+ * CSE30 username: cs30s122bp (TODO: Fill in)
  */
 
 #include "poll_lookup.h"
