@@ -153,7 +153,7 @@ void print_date_stats(node **table, unsigned long size, char *datestr) {
   strncpy(temp, datestr, 12);
 
   int maxtemp=-1000000; int mintemp= 1000000; int maxpm=-1000000; int minpm= 1000000;
-  int avpm=0; int avtemp=0; int count=0; int count2=0;
+  int avpm=0; int avtemp=0; int count=0; 
 
   char *token = strtok(datestr, "-");
   int cols[COL_DAY+1];
