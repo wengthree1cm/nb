@@ -241,13 +241,14 @@ int load_table(node **table, unsigned long size, char *filename) {
 
 		char *stripped_date = strip_date(buf1);
         unsigned long value=hash(stripped_date)%size;
-        /*
+        
         if(node_lookup(head,buf[0],buf[1],buf[2],buf[3])!=NULL){
             fprintf(stderr,"load_table duplicate entry: %d-%d-%d %d\n",buf[0],buf[1],buf[2],buf[3]);
         }
-        */
-
-		table[value] = add_node(table[value],buf[0],buf[1],buf[2],buf[3],buf[4],buf[5]);
+        else{
+	    table[value] = add_node(table[value],buf[0],buf[1],buf[2],buf[3],buf[4],buf[5]);
+	}
+	
     }
 
   return 0;
